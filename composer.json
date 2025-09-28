@@ -1,0 +1,72 @@
+{
+    "name": "projectsaturnstudios/rtx-php",
+    "description": "PHP library for CUDA Graphics acceleration - Object-oriented wrapper for the CudaGraphics PHP extension",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "keywords": [
+        "cuda",
+        "gpu",
+        "graphics",
+        "rtx",
+        "jetson",
+        "orin",
+        "parallel",
+        "acceleration",
+        "embedded",
+        "hardware",
+        "yahboom",
+        "cube",
+        "nvidia"
+    ],
+    "homepage": "https://github.com/projectsaturnstudios/rtx-php",
+    "authors": [
+        {
+            "name": "Project Saturn Studios",
+            "email": "info@projectsaturnstudios.com",
+            "homepage": "https://projectsaturnstudios.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/projectsaturnstudios/rtx-php/issues",
+        "source": "https://github.com/projectsaturnstudios/rtx-php"
+    },
+    "require": {
+        "php": "^8.1",
+        "ext-cuda_graphics": "*"
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.0"
+    },
+    "suggest": {
+        "projectsaturnstudios/ssd1306-php": "For displaying GPU-generated graphics on SSD1306 OLED displays"
+    },
+    "autoload": {
+        "psr-4": {
+            "ProjectSaturnStudios\\RTX\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ProjectSaturnStudios\\RTX\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "test-coverage": "pest --coverage",
+        "test-unit": "pest tests/Unit",
+        "test-feature": "pest tests/Feature",
+        "test-performance": "pest tests/Performance"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
