@@ -73,8 +73,8 @@ class RTX
             try {
                 $info = \cuda_graphics_get_device_info();
                 
-                // Calculate CUDA cores (Jetson Orin Nano has 64 cores per SM)
-                $cudaCores = ($info['multiProcessorCount'] ?? 0) * 64;
+                // Calculate CUDA cores (Jetson Orin Nano has 128 cores per SM)
+                $cudaCores = ($info['multiProcessorCount'] ?? 0) * 128;
                 $info['cudaCores'] = $cudaCores;
                 
                 // Format memory in MB
